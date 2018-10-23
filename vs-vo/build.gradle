@@ -1,6 +1,4 @@
 apply from : '../build.gradle'
-apply plugin: 'java'
-
 
 dependencies {
     compile( project(":vs-common") )
