@@ -1,0 +1,8 @@
+rootProject.name = 'java-module-template'
+include 'vs-common'
+include 'vs-dao'
+include 'vs-api'
+include 'vs-service'
+include 'vs-entity'
+include 'vs-entity'
+

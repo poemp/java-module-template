@@ -1,0 +1,9 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply from : '../build.gradle'
+
+dependencies {
+    compile( project(":vs-api") )
+    compile( project(":vs-entity") )
+    compile( project(":vs-common") )
+}
