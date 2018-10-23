@@ -4,5 +4,6 @@ include 'vs-dao'
 include 'vs-api'
 include 'vs-service'
 include 'vs-entity'
-include 'vs-entity'
+include 'vs-controller'
+include 'vs-vo'
 

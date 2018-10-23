@@ -1,16 +1,104 @@
-plugins {
-    id 'java'
-}
-
 group 'org.poem'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+
+buildscript {
+    ext {
+        springBootVersion = "2.0.6.RELEASE"
+        gradleDependencyVersion = "1.0.4.RELEASE"
+        springloadedVersion = "1.2.8.RELEASE"
+    }
+    repositories {
+        //为了加载Finchley.M7版本引入的maven仓库
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "https://repo.spring.io/libs-milestone" }
+        jcenter()
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath("io.spring.gradle:dependency-management-plugin:${gradleDependencyVersion}")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("org.springframework:springloaded:${springloadedVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+apply plugin: "io.spring.dependency-management"
+apply plugin: 'org.springframework.boot'
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+}
+
+
+ext {
+    springBootVersion = "2.0.1.RELEASE"
+    gradleDependencyVersion = "1.0.4.RELEASE"
+    postgresqlVersion = "42.1.4"
+    HikariCPVersion = "2.7.4"
+    jooqVersion = "3.10.2"
+    flywayVersion = "4.2.0"
+    fastJsonVersion = "1.2.12"
+    swagger2Version = "2.6.1"
+    commonsIoVersion = "1.3.2"
+    fileuploadVersion = "1.3.2"
+    webSocketClientVersion = "2.3"
+    swaggerBootstrapVersion = "1.8.2"
+}
 
 repositories {
+    flatDir {
+        dirs "$rootProject.projectDir/libs"
+    }
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    maven { url "https://repo.spring.io/libs-milestone" }
+    jcenter()
     mavenCentral()
+    mavenLocal()
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-data-redis:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-quartz:${springBootVersion}")
+    compile("org.postgresql:postgresql:${postgresqlVersion}")
+    compile("com.neovisionaries:nv-websocket-client:${webSocketClientVersion}")
+    compile("com.zaxxer:HikariCP:${HikariCPVersion}")
+    compile("org.jooq:jooq-codegen:${jooqVersion}")
+    compile("org.jooq:jooq:${jooqVersion}")
+    compile("org.jooq:jooq-meta:${jooqVersion}")
+    compile("org.flywaydb:flyway-core:${flywayVersion}")
+    compile("com.alibaba:fastjson:${fastJsonVersion}")
+    compile("io.springfox:springfox-swagger-ui:${swagger2Version}")
+    compile("io.springfox:springfox-swagger2:${swagger2Version}")
+    compile("commons-io:commons-io:${commonsIoVersion}")
+    compile("commons-fileupload:commons-fileupload:${fileuploadVersion}")
+    compile("com.github.xiaoymin:swagger-bootstrap-ui:${swaggerBootstrapVersion}")
+}
+allprojects {
+    jar {
+        enabled = true
+    }
+
+    bootJar {
+        manifest {
+            attributes 'Start-Class': 'com.xcff.XcffServiceEntry'
+        }
+    }
+}
+

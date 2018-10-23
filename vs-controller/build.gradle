@@ -1,9 +1,10 @@
+apply plugin: 'io.spring.dependency-management'
 apply plugin: 'java'
-apply plugin: 'war'
-apply from : '../build.gradle'
+apply plugin: 'org.springframework.boot'
+
 
 dependencies {
-    compile( project(":vs-api") )
-    compile( project(":vs-entity") )
     compile( project(":vs-common") )
+    compile( project(":vs-service") )
+    compile( project(":vs-vo") )
 }

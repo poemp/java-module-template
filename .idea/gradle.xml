@@ -10,8 +10,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/vs-api" />
             <option value="$PROJECT_DIR$/vs-common" />
+            <option value="$PROJECT_DIR$/vs-controller" />
             <option value="$PROJECT_DIR$/vs-dao" />
+            <option value="$PROJECT_DIR$/vs-entity" />
             <option value="$PROJECT_DIR$/vs-service" />
+            <option value="$PROJECT_DIR$/vs-vo" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

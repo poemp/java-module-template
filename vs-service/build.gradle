@@ -2,14 +2,10 @@ apply from : '../build.gradle'
 apply plugin: 'java'
 
 
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    compile( project(":vs-entity") )
     compile( project(":vs-common") )
-    compile( project(":vs-vo"))
+    compile( project(":vs-entity") )
+    compile( project(":vs-api") )
+    compile( project(":vs-dao") )
+    compile( project(":vs-vo") )
 }

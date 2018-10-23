@@ -4,15 +4,5 @@ apply plugin: 'java'
 
 dependencies {
     compile( project(":vs-common") )
-    compile( project(":vs-model") )
-    compile("org.springframework.boot:spring-boot-starter-jooq:${springBootVersion}")
-}
-
-group 'org.poem'
-version '1.0-SNAPSHOT'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+    compile( project(":vs-entity") )
 }
