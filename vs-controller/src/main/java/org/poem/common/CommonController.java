@@ -24,7 +24,7 @@ public class CommonController {
      * @return
      */
     @RequestMapping(value = "/common",method = RequestMethod.GET)
-    @ApiOperation(value = "测试",tags = "测试",httpMethod = "GET")
+    @ApiOperation(value = "接口",tags = "请求",httpMethod = "GET")
     public ResultVO<CommonVO> common(){
         CommonVO commonVO = this.commonService.common();
         return new ResultVO<>(0, commonVO, "操作完成");
