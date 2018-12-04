@@ -13,3 +13,5 @@ spring:
     maxPoolSize: 500
   jooq:
     sql-dialect: POSTGRES
+  resources:
+    static-locations: classpath:/webapp/
