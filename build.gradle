@@ -1,18 +1,29 @@
 group 'org.poem'
 version '1.0-SNAPSHOT'
 
+
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+apply plugin: "io.spring.dependency-management"
+apply plugin: 'org.springframework.boot'
+
+
 buildscript {
-    repositories {
-        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
-        mavenCentral()
-        jcenter()
-        mavenLocal()
-    }
 
     ext {
         postgresqlVersion = "42.2.4"
         jooqVersion = "3.11.4"
         springBootVersion = "2.0.6.RELEASE"
+    }
+
+    repositories {
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url "https://repo.spring.io/libs-milestone" }
+        mavenCentral()
+        jcenter()
+        mavenLocal()
     }
 
 
@@ -26,11 +37,21 @@ buildscript {
 
 }
 
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+}
+
 repositories {
     flatDir {
         dirs "$rootProject.projectDir/libs"
     }
+    //为了加载Finchley.M7版本引入的maven仓库
     maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    maven { url "https://repo.spring.io/libs-milestone" }
     mavenCentral()
     jcenter()
     mavenLocal()
@@ -41,11 +62,45 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-subprojects{
 
-    apply plugin: 'java'
-    apply plugin: 'war'
-    apply plugin: 'idea'
+ext {
+    springBootVersion = "2.0.4.RELEASE"
+    jooqVersion = "3.11.4"
+    HikariCPVersion = "3.2.0"
+    postgresqlVersion = "42.2.4"
+    flywayVersion = "5.1.4"
+    shiroVersion = "1.4.0"
+    swagger2Version = "2.9.2"
+    swaggerBootstrapVersion = "1.8.2"
+}
+
+
+dependencies {
+    compile("com.github.xiaoymin:swagger-bootstrap-ui:${swaggerBootstrapVersion}")
+    compile("io.springfox:springfox-swagger2:${swagger2Version}")
+    compile("org.apache.shiro:shiro-spring:${shiroVersion}")
+    compile("org.apache.shiro:shiro-web:${shiroVersion}")
+    compile("org.apache.shiro:shiro-core:${shiroVersion}")
+    compile("org.flywaydb:flyway-core:${flywayVersion}")
+    compile("org.postgresql:postgresql:${postgresqlVersion}")
+    compile("com.zaxxer:HikariCP:${HikariCPVersion}")
+    compile("org.postgresql:postgresql:${postgresqlVersion}")
+    compile("org.jooq:jooq:${jooqVersion}")
+    compile("org.jooq:jooq-meta:${jooqVersion}")
+    compile("org.jooq:jooq-codegen:${jooqVersion}")
+    compile("org.springframework.boot:spring-boot-autoconfigure:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-jooq:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-logging:${springBootVersion}")
+    compile("org.apache.commons:commons-lang3:3.0")
+    compile("com.alibaba:fastjson:1.2.49")
+    compile("org.apache.shiro:shiro-spring:1.4.0")
+    compile("org.apache.shiro:shiro-ehcache:1.4.0")
+
+}
+
+subprojects {
+
 
     sourceCompatibility = 1.8
 
@@ -61,39 +116,16 @@ subprojects{
             }
         }
     }
+}
 
-    ext {
-        springBootVersion = "2.0.4.RELEASE"
-        jooqVersion="3.11.4"
-        HikariCPVersion="3.2.0"
-        postgresqlVersion="42.2.4"
-        flywayVersion="5.1.4"
-        shiroVersion="1.4.0"
-        swagger2Version="2.9.2"
-        swaggerBootstrapVersion="1.8.2"
+allprojects {
+    jar {
+        enabled = true
     }
 
-    dependencies {
-        compile("com.github.xiaoymin:swagger-bootstrap-ui:${swaggerBootstrapVersion}")
-        compile("io.springfox:springfox-swagger2:${swagger2Version}")
-        compile("org.apache.shiro:shiro-spring:${shiroVersion}")
-        compile("org.apache.shiro:shiro-web:${shiroVersion}")
-        compile("org.apache.shiro:shiro-core:${shiroVersion}")
-        compile("org.flywaydb:flyway-core:${flywayVersion}")
-        compile("org.postgresql:postgresql:${postgresqlVersion}")
-        compile("com.zaxxer:HikariCP:${HikariCPVersion}")
-        compile("org.postgresql:postgresql:${postgresqlVersion}")
-        compile("org.jooq:jooq:${jooqVersion}")
-        compile("org.jooq:jooq-meta:${jooqVersion}")
-        compile("org.jooq:jooq-codegen:${jooqVersion}")
-        compile("org.springframework.boot:spring-boot-autoconfigure:${springBootVersion}")
-        compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
-        compile("org.springframework.boot:spring-boot-starter-jooq:${springBootVersion}")
-        compile("org.springframework.boot:spring-boot-starter-logging:${springBootVersion}")
-        compile("org.apache.commons:commons-lang3:3.0")
-        compile("com.alibaba:fastjson:1.2.49")
-        compile("org.apache.shiro:shiro-spring:1.4.0")
-        compile("org.apache.shiro:shiro-ehcache:1.4.0")
-
+    bootJar {
+        manifest {
+            attributes 'Start-Class': 'com.poem.Application'
+        }
     }
 }

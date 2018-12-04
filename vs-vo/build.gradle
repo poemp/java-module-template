@@ -1,5 +1,5 @@
 apply from : '../build.gradle'
 
 dependencies {
-    compile( project(":vs-common") )
+
 }

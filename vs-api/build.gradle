@@ -3,7 +3,6 @@ apply from : '../build.gradle'
 apply plugin: 'java'
 
 dependencies {
-    compile( project(":vs-entity") )
     compile( project(":vs-common") )
     compile( project(":vs-vo"))
 }
