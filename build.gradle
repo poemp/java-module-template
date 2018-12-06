@@ -71,7 +71,7 @@ ext {
     flywayVersion = "5.1.4"
     shiroVersion = "1.4.0"
     swagger2Version = "2.9.2"
-    swaggerBootstrapVersion = "1.8.2"
+    swaggerBootstrapVersion = "1.8.7"
 }
 
 
