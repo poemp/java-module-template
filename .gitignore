@@ -25,3 +25,104 @@ hs_err_pid*
 /.idea/
 /.gradle/
 /gradle/
+
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+### JDeveloper template
+# default application storage directory used by the IDE Performance Cache feature
+.data/
+
+# used for ADF styles caching
+temp/
+
+# default output directories
+classes/
+deploy/
+javadoc/
+
+# lock file, a part of Oracle Credential Store Framework
+cwallet.sso.lck### JEnv template
+# JEnv local Java version configuration file
+.java-version
+
+# Used by previous versions of JEnv
+.jenv-version
+### Eclipse template
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+libs/
+vs-api/src/main/resources/
+vs-api/src/test/
+vs-common/build/classes/main/ehcache-shiro.xml
+vs-common/build/classes/main/logback.xml
+vs-common/src/main/resources/db_migrations/
+vs-common/src/test/
+vs-controller/src/test/
+vs-dao/src/main/resources/
+vs-dao/src/test/
+vs-entity/build/classes/
+vs-entity/out/
+vs-entity/src/main/resources/
+vs-entity/src/test/
+vs-service/src/main/resources/
+vs-service/src/test/
+vs-vo/src/main/resources/
+vs-vo/src/test/
+/logs/
+**/out/
+*/**/build/

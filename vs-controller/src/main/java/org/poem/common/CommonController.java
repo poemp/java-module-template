@@ -2,7 +2,7 @@ package org.poem.common;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.poem.result.ResultVO;
+import org.poem.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,9 +25,9 @@ public class CommonController {
      */
     @RequestMapping(value = "/common",method = RequestMethod.GET)
     @ApiOperation(value = "接口",tags = "请求",httpMethod = "GET")
-    public ResultVO<CommonVO> common(){
+    public ResultVo<CommonVO> common(){
         CommonVO commonVO = this.commonService.common();
-        return new ResultVO<>(0, commonVO, "操作完成");
+        return new ResultVo<>(0, commonVO, "操作完成");
     }
 
 }

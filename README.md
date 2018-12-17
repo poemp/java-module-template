@@ -10,7 +10,7 @@ Java 模板
 
 ## 启动
 ``````$xslt
- 1、直接启动 ava -jar -Dspring.config.location=application.yml  xxx.war
+ 1、直接启动 java -jar -Dspring.config.location=application.yml  xxx.war
     application.yml 是放在 war 统计目录下， 可以覆盖 war 包里面的配置文件
    
  2、放到tomcat里面启动

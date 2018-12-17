@@ -2,7 +2,7 @@ spring:
   devtools: true
   flyway:
     locations: classpath:/db_migrations
-    enabled: true
+    enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driverClassName: org.postgresql.Driver
