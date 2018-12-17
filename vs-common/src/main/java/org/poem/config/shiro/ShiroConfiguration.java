@@ -63,40 +63,32 @@ public class ShiroConfiguration {
         logger.info("shiroconfiguration-shirFilter");
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
+
+        //注册拦截器的类型
+        Map<String, Filter> filters = new HashMap<>(2);
+        filters.put("oauth", getShiroOAuth2Filter());
+        shiroFilterFactoryBean.setFilters(filters);
         // 拦截器
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         // 配置不会拦截的链接
         filterChainDefinitionMap.put("/static/**", "anon");
         filterChainDefinitionMap.put("/swagger/**", "anon");
         filterChainDefinitionMap.put("/doc.html", "anon");
-        // 配置退出 过滤器,其中的具体的退出代码Shiro已经替我们实现了
-        filterChainDefinitionMap.put("/logout", "logout");
 
         // <!-- 过滤链定义，从上向下顺序执行，一般将/**放在最为下边 -->:这是一个坑呢，一不小心代码就不好使了;
         // <!-- authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问-->
-        Set<String> path = OAuthIgnoreUtils.getOAthodPath("org.poem");
+        Set<String> path = OAuthIgnoreUtils.getNoOAthodPath("org.poem");
         for (String s : path) {
-            logger.info("Mapped No OAuth:" + s);
             filterChainDefinitionMap.put(s, "anon");
+        }
+        Set<String> oauthPaths = OAuthIgnoreUtils.getOAuthod("org.poem");
+        for (String oauthPath : oauthPaths) {
+            filterChainDefinitionMap.put(oauthPath, "oauth");
         }
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
-        Map<String, Filter> filters = new HashMap<>(2);
-//        filters.put("logout", getShiroLogoutFilter());
-        filters.put("oauth", getShiroOAuth2Filter());
-        shiroFilterFactoryBean.setFilters(filters);
-
         return shiroFilterFactoryBean;
     }
-
-//    /**
-//     * 登出拦截
-//     * @return
-//     */
-//    @Bean
-//    ShiroLogoutFilter getShiroLogoutFilter() {
-//        return new ShiroLogoutFilter();
-//    }
 
     /**
      * 自定义拦截器

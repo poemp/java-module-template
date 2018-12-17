@@ -1,9 +1,7 @@
 package org.poem.user;
 
 
-import org.poem.vo.ResultVo;
 import org.poem.vo.UserInfoVO;
-import org.poem.vo.UserLoginVo;
 
 /**
  * @author poem
@@ -25,6 +23,6 @@ public interface UserInfoService {
      * @param ip
      * @return
      */
-    ResultVo<UserInfoVO> login(String userName, String password, String ip);
+    UserInfoVO login(String userName, String password, String ip);
 
 }
