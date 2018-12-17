@@ -9,7 +9,6 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.poem.OAuthIgnoreUtils;
-import org.poem.config.filter.ShiroLogoutFilter;
 import org.poem.config.filter.ShiroOauthFilter;
 import org.poem.config.ralm.ShiroConfigRealm;
 import org.slf4j.Logger;
@@ -83,21 +82,21 @@ public class ShiroConfiguration {
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
         Map<String, Filter> filters = new HashMap<>(2);
-        filters.put("logout", getShiroLogoutFilter());
+//        filters.put("logout", getShiroLogoutFilter());
         filters.put("oauth", getShiroOAuth2Filter());
         shiroFilterFactoryBean.setFilters(filters);
 
         return shiroFilterFactoryBean;
     }
 
-    /**
-     * 登出拦截
-     * @return
-     */
-    @Bean
-    ShiroLogoutFilter getShiroLogoutFilter() {
-        return new ShiroLogoutFilter();
-    }
+//    /**
+//     * 登出拦截
+//     * @return
+//     */
+//    @Bean
+//    ShiroLogoutFilter getShiroLogoutFilter() {
+//        return new ShiroLogoutFilter();
+//    }
 
     /**
      * 自定义拦截器

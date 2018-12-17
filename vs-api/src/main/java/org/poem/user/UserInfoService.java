@@ -18,12 +18,13 @@ public interface UserInfoService {
     UserInfoVO findByUsername(String userName);
 
 
-
     /**
      * 登陆
-     * @param userLoginVo´
+     * @param userName
+     * @param password
+     * @param ip
      * @return
      */
-    ResultVo<UserInfoVO> login(UserLoginVo userLoginVo, String ip);
+    ResultVo<UserInfoVO> login(String userName, String password, String ip);
 
 }

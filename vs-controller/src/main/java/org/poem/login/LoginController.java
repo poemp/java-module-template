@@ -30,18 +30,18 @@ public class LoginController {
 
     /**
      * 登陆
-     *
-     * @param userLoginVo
+     * @param userName
+     * @param password
      * @param request
      * @return
      */
     @PostMapping("/login")
     @ApiOperation(value = "用户登陆", notes = "登陆", httpMethod = "POST")
-    public ResultVo<UserInfoVO> login(@RequestBody UserLoginVo userLoginVo, HttpServletRequest request) {
-        logger.info("find :" + JSON.toJSONString(userLoginVo));
+    public ResultVo<UserInfoVO> login(String userName, String password,  HttpServletRequest request) {
+        logger.info("find :userName: " + userName + " password:" + password);
         String ipAddr = IpUtils.getIpAddr(request);
         UserInfoService userInfoService = SpringUtils.getBean(UserInfoService.class);
-        return userInfoService.login(userLoginVo, ipAddr);
+        return userInfoService.login(userName,password, ipAddr);
     }
 
     /**
