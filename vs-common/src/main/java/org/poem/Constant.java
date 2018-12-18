@@ -35,6 +35,6 @@ public class Constant {
     /**
      * 权限的key
      */
-    public static final String AUTHORIZATION = "Authorization";
+    public static final String AUTHORIZATION = "authorization";
 
 }

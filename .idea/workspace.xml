@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5bdde4-6e9f-4a8e-819e-0eebef1f91cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/auth/LoginSuccessVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vs-service/src/main/java/org/poem/user/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vs-api/src/main/java/org/poem/user/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vs-api/src/main/java/org/poem/user/UserInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/OAuthIgnoreUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/OAuthIgnoreUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/filter/ShiroLogoutFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/shiro/ShiroConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/shiro/ShiroConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/constant/ErrorCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vs-controller/src/main/java/org/poem/common/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vs-controller/src/main/java/org/poem/common/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/jwt/JwtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/vs-common/src/main/java/org/poem/jwt/JwtHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vs-controller/src/main/java/org/poem/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vs-controller/src/main/java/org/poem/login/LoginController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -98,15 +94,16 @@
     <session id="-694846561">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="4" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -115,7 +112,7 @@
           <entry key="gitignore" value="3" />
           <entry key="gradle" value="60" />
           <entry key="gradlew" value="2" />
-          <entry key="java" value="207" />
+          <entry key="java" value="225" />
           <entry key="md" value="2" />
           <entry key="properties" value="3" />
           <entry key="sql" value="2" />
@@ -130,7 +127,7 @@
           <entry key="DBN-SQL" value="2" />
           <entry key="Git file" value="3" />
           <entry key="Groovy" value="60" />
-          <entry key="JAVA" value="207" />
+          <entry key="JAVA" value="225" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="3" />
@@ -143,7 +140,7 @@
           <entry key="dummy" value="48" />
           <entry key="gitignore" value="6" />
           <entry key="gradle" value="301" />
-          <entry key="java" value="2663" />
+          <entry key="java" value="2816" />
           <entry key="md" value="272" />
           <entry key="properties" value="7" />
           <entry key="yml" value="62" />
@@ -153,7 +150,7 @@
         <counts>
           <entry key="Git file" value="6" />
           <entry key="Groovy" value="301" />
-          <entry key="JAVA" value="2663" />
+          <entry key="JAVA" value="2816" />
           <entry key="Markdown" value="272" />
           <entry key="PLAIN_TEXT" value="48" />
           <entry key="Properties" value="7" />
@@ -165,10 +162,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/shiro/ShiroConfiguration.java">
+        <entry file="file://$PROJECT_DIR$/vs-controller/src/main/java/org/poem/login/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+            <state relative-caret-position="900">
+              <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,14 +174,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/filter/ShiroOauthFilter.java">
+        <entry file="file://$PROJECT_DIR$/vs-service/src/main/java/org/poem/user/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1744">
-              <caret line="97" column="45" lean-forward="true" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
+            <state relative-caret-position="630">
+              <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3305#3313#0" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/jwt/JwtHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2304">
+              <caret line="136" column="55" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -203,88 +212,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/ralm/ShiroConfigRealm.java">
+        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/StringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="90" column="17" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="17" />
+            <state relative-caret-position="504">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#942#943#0" expanded="true" />
-                <element signature="e#986#987#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/filter/token/OAuthToken.java">
+        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/SpringUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1125#1126#0" expanded="true" />
+                <element signature="e#1186#1187#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/RequestUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-              <folding>
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#352#353#0" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#437#438#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/jwt/JwtHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="34" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="34" />
+              <caret line="29" column="54" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vs-controller/src/main/java/org/poem/login/LoginController.java">
+        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/Constant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="69" column="49" selection-end-line="89" />
+            <state relative-caret-position="198">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/ralm/ShiroConfigRealm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="954">
+              <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vs-api/src/main/java/org/poem/user/UserInfoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/UserInfoVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/auth/LoginSuccessVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#359#360#0" expanded="true" />
-                <element signature="e#387#388#0" expanded="true" />
-                <element signature="e#429#430#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
-                <element signature="e#537#538#0" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
+                <element signature="e#942#943#0" expanded="true" />
+                <element signature="e#986#987#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2128,8 +2107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vs-api/src/main/java/org/poem/common/CommonService.java" />
-        <option value="$PROJECT_DIR$/vs-service/src/main/java/org/poem/common/IndexServiceImpl.java" />
         <option value="$PROJECT_DIR$/vs-service/src/main/java/org/poem/common/CommonServiceImpl.java" />
         <option value="$PROJECT_DIR$/vs-service/build.gradle" />
         <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/db/JooqPgGen.java" />
@@ -2147,7 +2124,6 @@
         <option value="$PROJECT_DIR$/vs-common/build.gradle" />
         <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/oauth2/OAuth2Filter.java" />
         <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/oauth2/OAuth2Realm.java" />
-        <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/jwt/JwtHelper.java" />
         <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/vo/LoginSuccessVo.java" />
         <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/vo/UserInfoVO.java" />
         <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/oauth2/ShiroConfig.java" />
@@ -2178,7 +2154,10 @@
         <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/shiro/ShiroConfiguration.java" />
         <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/auth/LoginSuccessVO.java" />
         <option value="$PROJECT_DIR$/vs-api/src/main/java/org/poem/user/UserInfoService.java" />
+        <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/jwt/JwtHelper.java" />
+        <option value="$PROJECT_DIR$/vs-service/src/main/java/org/poem/user/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/vs-controller/src/main/java/org/poem/login/LoginController.java" />
+        <option value="$PROJECT_DIR$/vs-common/src/main/java/org/poem/Constant.java" />
       </list>
     </option>
   </component>
@@ -2195,9 +2174,10 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="-127" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -2234,8 +2214,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -2341,6 +2319,16 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="poem" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-module-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-java-module-template" type="462c0819:PsiDirectoryNode" />
+              <item name="vs-common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="poem" type="462c0819:PsiDirectoryNode" />
               <item name="jwt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2437,10 +2425,57 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="java-module-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-java-module-template" type="462c0819:PsiDirectoryNode" />
+              <item name="vs-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-module-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-java-module-template" type="462c0819:PsiDirectoryNode" />
+              <item name="vs-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-module-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-java-module-template" type="462c0819:PsiDirectoryNode" />
+              <item name="vs-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-module-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-java-module-template" type="462c0819:PsiDirectoryNode" />
+              <item name="vs-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-module-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-java-module-template" type="462c0819:PsiDirectoryNode" />
+              <item name="vs-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="poem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-module-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="21-java-module-template" type="462c0819:PsiDirectoryNode" />
+              <item name="vs-service" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="poem" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2620,18 +2655,20 @@
       <workItem from="1544092119791" duration="41000" />
       <workItem from="1544688789824" duration="5224000" />
       <workItem from="1544703260983" duration="5780000" />
-      <workItem from="1545011342466" duration="5585000" />
+      <workItem from="1545011342466" duration="7940000" />
+      <workItem from="1545061032974" duration="129000" />
+      <workItem from="1545102387884" duration="147000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30948000" />
+    <option name="totallyTimeSpent" value="33579000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1788269" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1941392" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -2645,7 +2682,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32970297" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48367348" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -2655,7 +2692,7 @@
       <window_info anchor="bottom" id="NativeScript" order="10" />
       <window_info anchor="bottom" id="Spring" order="11" />
       <window_info anchor="bottom" id="Freeline" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.4993895" weight="0.2029703" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.4993895" weight="0.20240964" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50061053" side_tool="true" weight="0.24285714" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="bottom" id="RNConsole" order="16" />
@@ -2674,7 +2711,7 @@
       <window_info anchor="right" id="BPMNPalette" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="right" id="Gradle" order="10" weight="0.31948882" />
+      <window_info active="true" anchor="right" id="Gradle" order="10" visible="true" weight="0.31929183" />
       <window_info anchor="right" id="Palette&#9;" order="11" />
       <window_info anchor="right" id="PlantUML" order="12" />
       <window_info anchor="right" id="Database" order="13" />
@@ -2730,101 +2767,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/ralm/ShiroConfigRealm.java</url>
-          <line>65</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/LoginSuccessVo.java" />
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/ResultVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/IpUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/RequestUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/resources/db_migrations/V0.1__init_dict.sql" />
-    <entry file="file://$PROJECT_DIR$/vs-controller/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/resources/ehcache-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.0.6.RELEASE/c4f8288a1200b4431d1dd61b1998b705a8b137a8/spring-boot-2.0.6.RELEASE-sources.jar!/org/springframework/boot/SpringApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="1227" column="48" selection-start-line="1227" selection-start-column="18" selection-end-line="1227" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-controller/src/main/java/org/poem/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.shiro/shiro-web/1.4.0/5e6d7b9ea2f17a640f08a8e95d3f43554d4fa3fb/shiro-web-1.4.0-sources.jar!/org/apache/shiro/web/servlet/AdviceFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2232">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/db/JooqPgGen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -2846,20 +2789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/MysqlJdbcUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="22" column="46" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2943,18 +2876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/SpringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vs-controller/src/main/java/org/poem/common/CommonController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -2962,27 +2883,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/filter/ShiroLogoutFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/constant/ErrorCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/filter/ShiroLogoutFilter.java" />
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/constant/ErrorCode.java" />
     <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3032,9 +2938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
           <caret line="52" column="40" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3042,9 +2945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3052,24 +2952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/ralm/ShiroConfigRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="90" column="17" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3077,10 +2959,128 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1744">
           <caret line="97" column="45" lean-forward="true" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/UserInfoVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs-api/src/main/java/org/poem/user/UserInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/auth/LoginSuccessVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/org/apache/catalina/startup/FailedContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="477" column="25" selection-start-line="477" selection-start-column="25" selection-end-line="477" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/org/apache/catalina/core/StandardContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="1121" column="36" lean-forward="true" selection-start-line="1121" selection-start-column="36" selection-end-line="1121" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/org/apache/catalina/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="704" column="25" selection-start-line="704" selection-start-column="25" selection-end-line="704" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/org/apache/catalina/core/ContainerBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="628" column="17" selection-start-line="628" selection-start-column="17" selection-end-line="628" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/org/apache/catalina/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="288" column="17" selection-start-line="288" selection-start-column="17" selection-end-line="288" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/org/apache/catalina/authenticator/AuthenticatorBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="1107" column="33" selection-start-line="1107" selection-start-column="30" selection-end-line="1107" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/org/apache/catalina/Authenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="52" column="11" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/org/apache/catalina/connector/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="2792" column="38" lean-forward="true" selection-start-line="2792" selection-start-column="38" selection-end-line="2792" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/javax/servlet/http/HttpServletRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="468" column="16" selection-start-line="468" selection-start-column="16" selection-end-line="468" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.34/d1ae2dbbd905b24f7ab2b11833d41c1e38aa95f0/tomcat-embed-core-8.5.34-sources.jar!/org/apache/tomcat/util/http/Rfc6265CookieProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="123" column="20" lean-forward="true" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs-controller/src/main/java/org/poem/login/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3305#3313#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs-service/src/main/java/org/poem/user/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/jwt/JwtHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2304">
+          <caret line="136" column="55" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -3095,52 +3095,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/jwt/JwtHelper.java">
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/UserInfoVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/vo/auth/LoginSuccessVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="504">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/SpringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vs-api/src/main/java/org/poem/user/UserInfoService.java">
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/RequestUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state relative-caret-position="342">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vs-controller/src/main/java/org/poem/login/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/config/ralm/ShiroConfigRealm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="69" column="49" selection-end-line="89" />
+        <state relative-caret-position="954">
+          <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vs-common/src/main/java/org/poem/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

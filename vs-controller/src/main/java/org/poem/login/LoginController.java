@@ -19,9 +19,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.poem.Constant.AUTHORIZATION;
 
 /**
  * @author poem
@@ -45,7 +49,7 @@ public class LoginController {
      */
     @PostMapping("/login")
     @ApiOperation(value = "0101-用户登陆", notes = "01-授权管理", httpMethod = "POST")
-    public ResultVo<LoginSuccessVO> login(String userName, String password, HttpServletRequest request) {
+    public ResultVo<LoginSuccessVO> login(String userName, String password, HttpServletRequest request, HttpServletResponse response) {
         logger.info("find :userName: " + userName + " password:" + password);
         String ipAddr = IpUtils.getIpAddr(request);
         if (StringUtils.isBlank(userName)) {
@@ -68,8 +72,9 @@ public class LoginController {
         LoginSuccessVO loginSuccessVO = new LoginSuccessVO();
         loginSuccessVO.setToken(token);
         loginSuccessVO.setUserInfoVO(userInfoVO);
-        return new ResultVo<>(0, loginSuccessVO, "账号被锁定。");
-        return;
+
+        response.addHeader(AUTHORIZATION, token);
+        return new ResultVo<>(0, loginSuccessVO, "登陆成功");
     }
 
     /**

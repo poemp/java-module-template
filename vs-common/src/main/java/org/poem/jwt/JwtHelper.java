@@ -133,7 +133,7 @@ public class JwtHelper {
         token = token.replaceAll("Banner ", "");
         Optional<Claims> claims = getClaimsFromToken(token);
         if (claims.isPresent()) {
-            Map<String, Object> info = new HashMap<String, Object>();
+            Map<String, Object> info = new HashMap<String, Object>(100);
             Set<String> keySet = claims.get().keySet();
             //通过迭代，提取token中的参数信息
             Iterator<String> iterator = keySet.iterator();
